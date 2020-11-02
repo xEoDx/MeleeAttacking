@@ -19,7 +19,6 @@ function MeleeAttackingController:Create(frame)
     Event.Register(controller, AttackConsumer.EventId)
     Event.Register(controller, DamageConsumer.EventId)
 
-
     setmetatable(controller, MeleeAttackingController)
     return controller
 end
@@ -35,7 +34,6 @@ function MeleeAttackingController:UpdateModel()
 end
 
 function MeleeAttackingController:WrongPositionEvent(eventname, ...)
-    print("Cant attack!")
     self.model.canAttack = false
     self:UpdateModel()
 end
@@ -68,7 +66,6 @@ function MeleeAttackingController:DamageEvent(eventname, ...)
     local couldDamage = ...
 
     if (couldDamage) then
-        print("Attacking!")
         self.model.canAttack = true
     end
     self:UpdateModel()

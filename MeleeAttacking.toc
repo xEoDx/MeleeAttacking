@@ -5,11 +5,11 @@
 ## Version: 0.0.1
 
 lib/event.lua
-src/controllers/MeleeAttackingController.lua
 src/events/DamageConsumer.lua
 src/events/AttackConsumer.lua
 src/events/PositionConsumer.lua
 src/events/TargetConsumer.lua
 src/models/MeleeAttackingModel.lua
-src/vms/MeleeAttackingVM.lua
+src/views/MeleeAttackingView.lua
+src/controllers/MeleeAttackingController.lua
 main.lua

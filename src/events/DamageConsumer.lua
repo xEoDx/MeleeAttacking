@@ -22,10 +22,9 @@ end
 function DamageConsumer:Dispatch(event, ...)
     if (self.AllowedEvents[event] == nil) then return end
 
-    local _, subevent,_,_,sourceName = CombatLogGetCurrentEventInfo()
+    local _, subevent, _, _, sourceName = CombatLogGetCurrentEventInfo()
 
-
-    if(sourceName ~= UnitName("player")) then return end
+    if (sourceName ~= UnitName("player")) then return end
 
     local couldDamage = false
 
